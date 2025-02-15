@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinalJorgePiero.MedicoMainPage"
+             Title="MedicoMainPage"
+             BackgroundColor="#FFFAF0">
+    <ScrollView>
+        <VerticalStackLayout Padding="30,50" Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
+
+            <Frame CornerRadius="20" Padding="20" BackgroundColor="White" HasShadow="True">
+                <Label 
+                Text="Buscar Cliente por ID"
+                FontSize="24"
+                FontAttributes="Bold"
+                TextColor="#512BD4"
+                HorizontalOptions="Center" />
+            </Frame>
+
+            <Frame CornerRadius="20" Padding="20" BackgroundColor="White" HasShadow="True">
+                <Entry x:Name="ClienteIdEntry" Placeholder="Ingrese ID del Cliente" Keyboard="Numeric" />
+            </Frame>
+
+            <Frame CornerRadius="20" Padding="20" BackgroundColor="White" HasShadow="True">
+                <Entry x:Name="CitaEntry" Placeholder="Ingrese nuevo valor de receta" />
+            </Frame>
+
+            <Button Text="Buscar"
+                BackgroundColor="#512BD4"
+                TextColor="White"
+                CornerRadius="20"
+                HeightRequest="50"
+                WidthRequest="250"
+                Clicked="OnBuscarYActualizarClicked"
+                HorizontalOptions="Center" />
+
+            <Label x:Name="ErrorLabel" Text="" TextColor="Red" HorizontalOptions="Center" />
+            <Label x:Name="ResultadoLabel" Text="" TextColor="Green" HorizontalOptions="Center" />
+
+            <Button Text="Actualizar receta"
+                BackgroundColor="#512BD4"
+                TextColor="White"
+                CornerRadius="20"
+                HeightRequest="50"
+                WidthRequest="250"
+                Clicked="OnEnviarRecetaClicked"
+                HorizontalOptions="Center" />
+            
+
+            <Button Text="Volver"
+                BackgroundColor="#512BD4"
+                TextColor="White"
+                CornerRadius="20"
+                HeightRequest="50"
+                WidthRequest="250"
+                Clicked="OnVolverClicked"
+                HorizontalOptions="Center" />
+
+            <ListView x:Name="ClientesListView" VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame CornerRadius="10" Padding="10" BackgroundColor="White" HasShadow="True">
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding usuario}" FontAttributes="Bold" TextColor="#512BD4" />
+                                    <Label Text="{Binding id}" TextColor="#3A3A3A" />
+                                    <Label Text="{Binding cita}" TextColor="#3A3A3A" />
+                                    <Label Text="{Binding receta}" TextColor="#3A3A3A" />
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

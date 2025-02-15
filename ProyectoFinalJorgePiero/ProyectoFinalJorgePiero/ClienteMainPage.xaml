@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinalJorgePiero.ClienteMainPage"
+             Title="ClienteMainPage"
+             BackgroundColor="#FFFAF0">
+    <VerticalStackLayout Padding="30,50" Spacing="25" HorizontalOptions="Center" VerticalOptions="Center">
+
+        <Frame CornerRadius="20" Padding="20" BackgroundColor="White" HasShadow="True">
+            <Label 
+            Text="Información del Cliente"
+            FontSize="24"
+            FontAttributes="Bold"
+            TextColor="#512BD4"
+            HorizontalOptions="Center" />
+        </Frame>
+
+        <Frame CornerRadius="20" Padding="20" BackgroundColor="White" HasShadow="True">
+            <Label x:Name="ClienteInfoLabel" 
+               Text="Cargando información del cliente..."
+               FontSize="18"
+               TextColor="#3A3A3A"
+               HorizontalOptions="Center" />
+        </Frame>
+
+        <Button Text="Volver"
+            BackgroundColor="#512BD4"
+            TextColor="White"
+            CornerRadius="20"
+            HeightRequest="50"
+            WidthRequest="200"
+            Clicked="OnVolverClicked"
+            HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinalJorgePiero.ComprobarAdministrativo"
+             Title="ComprobarAdministrativo"
+             BackgroundColor="#FFFAF0">
+    <ScrollView>
+        <VerticalStackLayout Padding="30,50" Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
+
+            <Frame CornerRadius="20" Padding="20" BackgroundColor="White" HasShadow="True">
+                <Label 
+                Text="Comprobar Administrativo"
+                FontSize="24"
+                FontAttributes="Bold"
+                TextColor="#512BD4"
+                HorizontalOptions="Center" />
+            </Frame>
+
+            <Frame CornerRadius="20" Padding="20" BackgroundColor="White" HasShadow="True">
+                <Entry
+                x:Name="UserEntry"
+                Placeholder="Nombre del administrativo"
+                VerticalOptions="Center" 
+                HorizontalOptions="Fill" />
+            </Frame>
+
+            <Frame CornerRadius="20" Padding="20" BackgroundColor="White" HasShadow="True">
+                <Entry
+                x:Name="PasswordEntry"
+                Placeholder="Contraseña"
+                IsPassword="True"
+                VerticalOptions="Center" 
+                HorizontalOptions="Fill" />
+            </Frame>
+
+            <Button
+            Text="Comprobar"
+            BackgroundColor="#512BD4"
+            TextColor="White"
+            CornerRadius="20"
+            HeightRequest="50"
+            WidthRequest="250"
+            Clicked="OnBtnLoggin"
+            HorizontalOptions="Center" />
+
+            <Label x:Name="ErrorLabel" Text="" TextColor="Red" HorizontalOptions="Center" />
+
+            <Button
+            Text="Registrar administrativo"
+            BackgroundColor="#512BD4"
+            TextColor="White"
+            CornerRadius="20"
+            HeightRequest="50"
+            WidthRequest="250"
+            Clicked="OnAddTestAdministrativoAsync"
+            HorizontalOptions="Center" />
+            <Button
+             Text="Eliminar Todos los administrativos"
+             BackgroundColor="#512BD4"
+             TextColor="White"
+             CornerRadius="20"
+             HeightRequest="50"
+             WidthRequest="250"
+             Clicked="OnDeleteAllAdministrativosClicked"
+             HorizontalOptions="Center" />
+
+            <Button
+            Text="Volver"
+            BackgroundColor="#512BD4"
+            TextColor="White"
+            CornerRadius="20"
+            HeightRequest="50"
+            WidthRequest="250"
+            Clicked="OnVolverClicked"
+            HorizontalOptions="Center" />
+
+            <Label
+            x:Name="labelResultado"
+            Text=""
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
